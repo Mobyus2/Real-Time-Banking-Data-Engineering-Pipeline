@@ -1,0 +1,183 @@
+[2026-02-22T17:04:11.972+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-02-22T17:04:12.003+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: minio_to_snowflake_banking.load_snowflake scheduled__2026-02-22T17:03:00+00:00 [queued]>
+[2026-02-22T17:04:12.012+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: minio_to_snowflake_banking.load_snowflake scheduled__2026-02-22T17:03:00+00:00 [queued]>
+[2026-02-22T17:04:12.013+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-02-22T17:04:12.029+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_snowflake> on 2026-02-22 17:03:00+00:00
+[2026-02-22T17:04:12.037+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'minio_to_snowflake_banking', 'load_snowflake', 'scheduled__2026-02-22T17:03:00+00:00', '--job-id', '989', '--raw', '--subdir', 'DAGS_FOLDER/minio_to_snowflake_dag.py', '--cfg-path', '/tmp/tmpxp9vemva']
+[2026-02-22T17:04:12.040+0000] {standard_task_runner.py:91} INFO - Job 989: Subtask load_snowflake
+[2026-02-22T17:04:12.041+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=50898) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-02-22T17:04:12.042+0000] {standard_task_runner.py:64} INFO - Started process 50910 to run task
+[2026-02-22T17:04:12.127+0000] {task_command.py:426} INFO - Running <TaskInstance: minio_to_snowflake_banking.load_snowflake scheduled__2026-02-22T17:03:00+00:00 [running]> on host f2d9c9e2564d
+[2026-02-22T17:04:12.251+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='minio_to_snowflake_banking' AIRFLOW_CTX_TASK_ID='load_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2026-02-22T17:03:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-02-22T17:03:00+00:00'
+[2026-02-22T17:04:12.253+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-02-22T17:04:12.281+0000] {connection.py:613} INFO - Snowflake Connector for Python Version: 4.3.0, Python Version: 3.12.4, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2026-02-22T17:04:12.283+0000] {connection.py:1709} INFO - Connecting to GLOBAL Snowflake domain
+[2026-02-22T17:04:14.877+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234918105812.parquet -> @customers stage
+[2026-02-22T17:04:15.079+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234918437151.parquet -> @customers stage
+[2026-02-22T17:04:15.286+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234918561960.parquet -> @customers stage
+[2026-02-22T17:04:15.485+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234918669711.parquet -> @customers stage
+[2026-02-22T17:04:15.701+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234918803581.parquet -> @customers stage
+[2026-02-22T17:04:15.887+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234918923394.parquet -> @customers stage
+[2026-02-22T17:04:16.057+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234919120182.parquet -> @customers stage
+[2026-02-22T17:04:16.221+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234921665207.parquet -> @customers stage
+[2026-02-22T17:04:16.405+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234921758110.parquet -> @customers stage
+[2026-02-22T17:04:16.583+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234921847149.parquet -> @customers stage
+[2026-02-22T17:04:16.767+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234921926178.parquet -> @customers stage
+[2026-02-22T17:04:16.954+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234922007518.parquet -> @customers stage
+[2026-02-22T17:04:17.153+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234922078160.parquet -> @customers stage
+[2026-02-22T17:04:17.332+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234922162590.parquet -> @customers stage
+[2026-02-22T17:04:17.514+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234922744865.parquet -> @customers stage
+[2026-02-22T17:04:17.679+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234922834985.parquet -> @customers stage
+[2026-02-22T17:04:17.869+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234922932607.parquet -> @customers stage
+[2026-02-22T17:04:18.099+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234923025974.parquet -> @customers stage
+[2026-02-22T17:04:18.295+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234923111005.parquet -> @customers stage
+[2026-02-22T17:04:18.490+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/customers_234923205643.parquet -> @customers stage
+[2026-02-22T17:04:19.200+0000] {logging_mixin.py:188} INFO - Data loaded into customers
+[2026-02-22T17:04:19.430+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234919229379.parquet -> @accounts stage
+[2026-02-22T17:04:19.660+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234919339290.parquet -> @accounts stage
+[2026-02-22T17:04:19.839+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234920053429.parquet -> @accounts stage
+[2026-02-22T17:04:20.021+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234920162262.parquet -> @accounts stage
+[2026-02-22T17:04:20.209+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234920297803.parquet -> @accounts stage
+[2026-02-22T17:04:20.416+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234920394646.parquet -> @accounts stage
+[2026-02-22T17:04:20.582+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234923335866.parquet -> @accounts stage
+[2026-02-22T17:04:20.748+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234923452458.parquet -> @accounts stage
+[2026-02-22T17:04:20.917+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234923816025.parquet -> @accounts stage
+[2026-02-22T17:04:21.085+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234923976275.parquet -> @accounts stage
+[2026-02-22T17:04:21.261+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234924694842.parquet -> @accounts stage
+[2026-02-22T17:04:21.404+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234924793702.parquet -> @accounts stage
+[2026-02-22T17:04:21.555+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234924894453.parquet -> @accounts stage
+[2026-02-22T17:04:21.703+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926222060.parquet -> @accounts stage
+[2026-02-22T17:04:21.865+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926321807.parquet -> @accounts stage
+[2026-02-22T17:04:22.104+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926416924.parquet -> @accounts stage
+[2026-02-22T17:04:22.271+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926499851.parquet -> @accounts stage
+[2026-02-22T17:04:22.437+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926596272.parquet -> @accounts stage
+[2026-02-22T17:04:22.612+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926697438.parquet -> @accounts stage
+[2026-02-22T17:04:22.961+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234926792866.parquet -> @accounts stage
+[2026-02-22T17:04:23.203+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234928114151.parquet -> @accounts stage
+[2026-02-22T17:04:23.588+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234928202943.parquet -> @accounts stage
+[2026-02-22T17:04:23.916+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234928287885.parquet -> @accounts stage
+[2026-02-22T17:04:24.240+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234928371185.parquet -> @accounts stage
+[2026-02-22T17:04:24.576+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234928457421.parquet -> @accounts stage
+[2026-02-22T17:04:24.914+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234928550187.parquet -> @accounts stage
+[2026-02-22T17:04:25.254+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929152701.parquet -> @accounts stage
+[2026-02-22T17:04:25.584+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929241696.parquet -> @accounts stage
+[2026-02-22T17:04:26.004+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929332029.parquet -> @accounts stage
+[2026-02-22T17:04:26.265+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929417192.parquet -> @accounts stage
+[2026-02-22T17:04:26.463+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929507568.parquet -> @accounts stage
+[2026-02-22T17:04:26.652+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929633147.parquet -> @accounts stage
+[2026-02-22T17:04:26.830+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234929729800.parquet -> @accounts stage
+[2026-02-22T17:04:27.004+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931169046.parquet -> @accounts stage
+[2026-02-22T17:04:27.266+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931258522.parquet -> @accounts stage
+[2026-02-22T17:04:27.441+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931343394.parquet -> @accounts stage
+[2026-02-22T17:04:27.605+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931436645.parquet -> @accounts stage
+[2026-02-22T17:04:27.800+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931535175.parquet -> @accounts stage
+[2026-02-22T17:04:27.990+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931630343.parquet -> @accounts stage
+[2026-02-22T17:04:28.163+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/accounts_234931720633.parquet -> @accounts stage
+[2026-02-22T17:04:28.569+0000] {logging_mixin.py:188} INFO - Data loaded into accounts
+[2026-02-22T17:04:28.787+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234920527637.parquet -> @transactions stage
+[2026-02-22T17:04:28.999+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234920620288.parquet -> @transactions stage
+[2026-02-22T17:04:29.201+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234920743953.parquet -> @transactions stage
+[2026-02-22T17:04:29.403+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234920848936.parquet -> @transactions stage
+[2026-02-22T17:04:29.573+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234920995769.parquet -> @transactions stage
+[2026-02-22T17:04:29.769+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234921095960.parquet -> @transactions stage
+[2026-02-22T17:04:29.982+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234925010888.parquet -> @transactions stage
+[2026-02-22T17:04:30.179+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234925110210.parquet -> @transactions stage
+[2026-02-22T17:04:30.352+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234925202968.parquet -> @transactions stage
+[2026-02-22T17:04:30.536+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234925307206.parquet -> @transactions stage
+[2026-02-22T17:04:30.718+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234925401792.parquet -> @transactions stage
+[2026-02-22T17:04:30.973+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234925495946.parquet -> @transactions stage
+[2026-02-22T17:04:31.149+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234926886678.parquet -> @transactions stage
+[2026-02-22T17:04:31.352+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234926984193.parquet -> @transactions stage
+[2026-02-22T17:04:31.537+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234927074926.parquet -> @transactions stage
+[2026-02-22T17:04:31.712+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234927434757.parquet -> @transactions stage
+[2026-02-22T17:04:31.892+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234927538594.parquet -> @transactions stage
+[2026-02-22T17:04:32.065+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234927639183.parquet -> @transactions stage
+[2026-02-22T17:04:32.242+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234929827495.parquet -> @transactions stage
+[2026-02-22T17:04:32.453+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234929936899.parquet -> @transactions stage
+[2026-02-22T17:04:32.665+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234930133392.parquet -> @transactions stage
+[2026-02-22T17:04:32.840+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234930278006.parquet -> @transactions stage
+[2026-02-22T17:04:33.006+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234930573943.parquet -> @transactions stage
+[2026-02-22T17:04:33.187+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234930673583.parquet -> @transactions stage
+[2026-02-22T17:04:33.455+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234930765189.parquet -> @transactions stage
+[2026-02-22T17:04:33.639+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932114660.parquet -> @transactions stage
+[2026-02-22T17:04:33.827+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932192755.parquet -> @transactions stage
+[2026-02-22T17:04:34.003+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932278168.parquet -> @transactions stage
+[2026-02-22T17:04:34.247+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932358103.parquet -> @transactions stage
+[2026-02-22T17:04:34.452+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932442441.parquet -> @transactions stage
+[2026-02-22T17:04:34.619+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932522727.parquet -> @transactions stage
+[2026-02-22T17:04:34.804+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234932921552.parquet -> @transactions stage
+[2026-02-22T17:04:35.006+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234933016230.parquet -> @transactions stage
+[2026-02-22T17:04:35.182+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234933111052.parquet -> @transactions stage
+[2026-02-22T17:04:35.350+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234933198316.parquet -> @transactions stage
+[2026-02-22T17:04:35.556+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234933278851.parquet -> @transactions stage
+[2026-02-22T17:04:35.738+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234933369230.parquet -> @transactions stage
+[2026-02-22T17:04:35.929+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234933925204.parquet -> @transactions stage
+[2026-02-22T17:04:36.129+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934009718.parquet -> @transactions stage
+[2026-02-22T17:04:36.299+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934102903.parquet -> @transactions stage
+[2026-02-22T17:04:36.712+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934196027.parquet -> @transactions stage
+[2026-02-22T17:04:36.951+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934307523.parquet -> @transactions stage
+[2026-02-22T17:04:37.128+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934396633.parquet -> @transactions stage
+[2026-02-22T17:04:37.347+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934488117.parquet -> @transactions stage
+[2026-02-22T17:04:37.509+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934894146.parquet -> @transactions stage
+[2026-02-22T17:04:37.726+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234934986743.parquet -> @transactions stage
+[2026-02-22T17:04:37.890+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234935069074.parquet -> @transactions stage
+[2026-02-22T17:04:38.065+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234935175949.parquet -> @transactions stage
+[2026-02-22T17:04:38.241+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234935272437.parquet -> @transactions stage
+[2026-02-22T17:04:38.456+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234935370154.parquet -> @transactions stage
+[2026-02-22T17:04:38.656+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234935847189.parquet -> @transactions stage
+[2026-02-22T17:04:38.854+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234935955264.parquet -> @transactions stage
+[2026-02-22T17:04:39.060+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234936056628.parquet -> @transactions stage
+[2026-02-22T17:04:39.232+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234936151468.parquet -> @transactions stage
+[2026-02-22T17:04:39.469+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234936251977.parquet -> @transactions stage
+[2026-02-22T17:04:39.691+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234936345504.parquet -> @transactions stage
+[2026-02-22T17:04:39.865+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234936830532.parquet -> @transactions stage
+[2026-02-22T17:04:40.069+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234936940213.parquet -> @transactions stage
+[2026-02-22T17:04:40.281+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234937044510.parquet -> @transactions stage
+[2026-02-22T17:04:40.471+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234937144436.parquet -> @transactions stage
+[2026-02-22T17:04:40.644+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234937237946.parquet -> @transactions stage
+[2026-02-22T17:04:40.848+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234937327317.parquet -> @transactions stage
+[2026-02-22T17:04:41.042+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234937424237.parquet -> @transactions stage
+[2026-02-22T17:04:41.214+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938006589.parquet -> @transactions stage
+[2026-02-22T17:04:41.411+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938102664.parquet -> @transactions stage
+[2026-02-22T17:04:41.589+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938199199.parquet -> @transactions stage
+[2026-02-22T17:04:41.779+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938297827.parquet -> @transactions stage
+[2026-02-22T17:04:41.969+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938389864.parquet -> @transactions stage
+[2026-02-22T17:04:42.148+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938497275.parquet -> @transactions stage
+[2026-02-22T17:04:42.340+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234938991890.parquet -> @transactions stage
+[2026-02-22T17:04:42.521+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234939081021.parquet -> @transactions stage
+[2026-02-22T17:04:43.036+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234939176644.parquet -> @transactions stage
+[2026-02-22T17:04:43.255+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234939278372.parquet -> @transactions stage
+[2026-02-22T17:04:43.493+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234939374490.parquet -> @transactions stage
+[2026-02-22T17:04:43.674+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234939468089.parquet -> @transactions stage
+[2026-02-22T17:04:43.865+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234939997340.parquet -> @transactions stage
+[2026-02-22T17:04:44.068+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234940104868.parquet -> @transactions stage
+[2026-02-22T17:04:44.254+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234940244694.parquet -> @transactions stage
+[2026-02-22T17:04:44.436+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234940358602.parquet -> @transactions stage
+[2026-02-22T17:04:44.671+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234940452543.parquet -> @transactions stage
+[2026-02-22T17:04:44.847+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234940557059.parquet -> @transactions stage
+[2026-02-22T17:04:45.056+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234940659936.parquet -> @transactions stage
+[2026-02-22T17:04:45.373+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234941163970.parquet -> @transactions stage
+[2026-02-22T17:04:45.567+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234941259224.parquet -> @transactions stage
+[2026-02-22T17:04:45.760+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234941365406.parquet -> @transactions stage
+[2026-02-22T17:04:45.939+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234941467795.parquet -> @transactions stage
+[2026-02-22T17:04:46.114+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234941573322.parquet -> @transactions stage
+[2026-02-22T17:04:46.316+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234941662407.parquet -> @transactions stage
+[2026-02-22T17:04:46.516+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234942160253.parquet -> @transactions stage
+[2026-02-22T17:04:46.676+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234942253356.parquet -> @transactions stage
+[2026-02-22T17:04:46.836+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234942350222.parquet -> @transactions stage
+[2026-02-22T17:04:46.994+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234942449378.parquet -> @transactions stage
+[2026-02-22T17:04:47.173+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234942596005.parquet -> @transactions stage
+[2026-02-22T17:04:47.410+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234942682137.parquet -> @transactions stage
+[2026-02-22T17:04:47.584+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234943096893.parquet -> @transactions stage
+[2026-02-22T17:04:47.783+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234943561718.parquet -> @transactions stage
+[2026-02-22T17:04:48.828+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234943780106.parquet -> @transactions stage
+[2026-02-22T17:04:48.988+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234943901825.parquet -> @transactions stage
+[2026-02-22T17:04:49.143+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234944014291.parquet -> @transactions stage
+[2026-02-22T17:04:49.318+0000] {logging_mixin.py:188} INFO - Uploaded /tmp/minio_downloads/transactions_234944140004.parquet -> @transactions stage
+[2026-02-22T17:04:49.700+0000] {logging_mixin.py:188} INFO - Data loaded into transactions
+[2026-02-22T17:04:49.843+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-02-22T17:04:49.844+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-02-22T17:04:49.864+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=minio_to_snowflake_banking, task_id=load_snowflake, run_id=scheduled__2026-02-22T17:03:00+00:00, execution_date=20260222T170300, start_date=20260222T170412, end_date=20260222T170449
+[2026-02-22T17:04:49.908+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-02-22T17:04:49.929+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-02-22T17:04:49.934+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
